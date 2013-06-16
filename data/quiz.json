@@ -1,0 +1,27 @@
+{"Questions":[
+	{
+		"Question": "Which one is yellow?",
+		"Answers": ["apple", "plum", "orange", "banana"],
+		"Correct": "banana"
+	},
+	{
+		"Question": "Which one is the biggest?",
+		"Answers": ["mouse", "elephant", "tiger", "monkey"],
+		"Correct": "elephant"
+	},
+	{
+		"Question": "Which one is oldest?",
+		"Answers": ["Seattle", "Berlin", "Rome", "Babylon"],
+		"Correct": "Babylon"
+	},
+	{
+		"Question": "Which one is blue?",
+		"Answers": ["sky", "grass", "water", "brick"],
+		"Correct": "sky"
+	},
+	{
+		"Question": "Which one is the sweetest?",
+		"Answers": ["lemon", "chocolate", "beer", "curry"],
+		"Correct": "chocolate"
+	}
+]}
