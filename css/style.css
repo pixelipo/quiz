@@ -1,2 +1,113 @@
-.question { display: none; }
-li:first-child { display: block; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	background-color: #EEECE9;
+	background-image:
+		repeating-linear-gradient(90deg, rgba(25,25,25,.3), rgba(255,255,255,.3) 1px, transparent 1px, transparent 100px),
+		repeating-linear-gradient(0deg, rgba(25,25,25,.3), rgba(255,255,255,.3) 1px, transparent 1px, transparent 100px),
+		repeating-linear-gradient(90deg, rgba(25,25,25,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 10px),
+		repeating-linear-gradient(0deg, rgba(25,25,25,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 10px);
+	background-size: 100px 100px;
+	background-image:
+		-webkit-repeating-linear-gradient(90deg, rgba(25,25,25,.3), rgba(255,255,255,.3) 1px, transparent 1px, transparent 100px),
+		-webkit-repeating-linear-gradient(0deg, rgba(25,25,25,.3), rgba(255,255,255,.3) 1px, transparent 1px, transparent 100px),
+		-webkit-repeating-linear-gradient(90deg, rgba(25,25,25,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 10px),
+		-webkit-repeating-linear-gradient(0deg, rgba(25,25,25,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 10px);
+	background-size: 100px 100px;
+}
+.main {
+	background-color: rgba(50,50,50,1);
+	color: white;
+	width: auto;
+	margin: 0 10%;
+	min-height: 480px;
+}
+h1 {
+	font-size: 1.5em;
+	padding: 20px 40px;
+	color: white;
+	background-color: rgb(66,133,244);
+	border-bottom: 1px solid #ccc;
+}
+.result {
+	color: white;
+	background-color: rgb(66,133,244);
+	padding: 20px 40px;
+	border-top: 1px solid #ccc;
+	width: auto;
+	margin: 0 10%;
+	display: none;
+}
+a {
+	color: rgb(66,133,244);
+	font-size: large;
+	margin-left: 90px;
+}
+a:hover {
+	color: rgb(233,233,233);
+	border-bottom: 1px dashed rgb(66,133,244);
+}
+.question {
+	display: none;
+	line-height: 3em;
+}
+section {
+	padding: 1em;
+	padding-left: 10%;
+	line-height: 3em;
+}
+li {
+	list-style-type: none;
+	line-height: 1.5em;
+}
+li:first-child {
+	display: block;
+}
+.number {
+	font-style: italic;
+	color: rgb(66,133,244);
+	font-size: large;
+	padding: 0.5em 0;
+}
+ul.question-list {
+	margin-left: 20px;
+}
+ul.question-list ul {
+	margin-bottom: 10px;
+}
+label {
+	margin-left: 1em;
+}
+@media (max-width: 700px) {
+	h1, .result {
+		padding: 20px 7%;
+	}
+	.result {
+		width: 66%;
+	}
+}

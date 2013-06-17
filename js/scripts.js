@@ -17,9 +17,9 @@ $.getJSON('data/quiz.json', function(data) {
 			});
 			qNum++;
 			if (qNum <= length) {
-				items.push('</ul><a href="#" onclick="nextQuestion('+length+');$(this).parent().hide();">next</a></li>');
+				items.push('</ul><a href="#" onclick="nextQuestion('+length+');$(this).parent().hide(\'slow\');">next</a></li>');
 			} else {
-				items.push('</ul><a href="#" onclick="showResults('+length+');">Show Results</a></li>');
+				items.push('</ul><a href="#" onclick="showResults();">show results</a></li>');
 			}
 	});
 	$('<ul/>', {
@@ -47,6 +47,26 @@ function nextQuestion(length)
 	current++;
 	if (current <= length) {
 		$("#current-question").html(current);
-		$("#"+current+"").show();
+		$("#"+current+"").show("slow");
 	}
+}
+
+function showResults()
+{
+	var result = 0;
+	$.getJSON('data/quiz.json', function(data) {
+		$.each(data.Questions, function(type, value) {
+			if(value.Correct == localStorage["question:"+value.Question]) {
+				result++;
+			}
+		});
+		if (result > 2) {
+			document.getElementById("result").innerHTML="Congratulations! You have "+result+" correct answers.";
+		} else if (result == 1) {
+			document.getElementById("result").innerHTML="I'm afraid you only have "+result+" correct answer.";
+		} else {
+			document.getElementById("result").innerHTML="You have no correct answers. Not that's a bit embarassing, don't you think?";
+		}
+		$("#result").show("slow");
+	});
 }
